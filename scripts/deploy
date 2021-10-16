@@ -1,0 +1,16 @@
+#!/bin/bash
+# usage: deploy [<remote-path>]
+
+remote_path=${1:-/srv/nginx}
+remote_path_wt_slash="${remote_path%/}"; shift
+
+build="$(realpath $(dirname $0)/../public)/"
+
+if [ ! -d "$build" ]; then
+  echo "error: $build is not a directory"
+  exit 1
+fi
+
+echo "Deploying $build to $remote_path_wt_slash/"
+
+rsync -avu --delete "$build" root@linode:"$remote_path_wt_slash/"

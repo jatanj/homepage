@@ -1,0 +1,34 @@
+#!/bin/bash
+# usage: build [<output_dir>]
+
+gatsby_dir="$(realpath $(dirname $0)/../)"
+gatsby_output_dir="$gatsby_dir/public"
+gatsby_commands=(
+  clean
+  build
+)
+
+files_to_remove=(
+ "webpack.stats.json"
+ "chunk-map.json"
+)
+
+cd "$gatsby_dir"
+for c in "${gatsby_commands[@]}"; do
+  gatsby $c
+done
+
+for f in "${files_to_remove[@]}"; do
+  path="$gatsby_output_dir/$f"
+  echo "Removing $path"
+  rm "$path"
+done
+
+if [ ! -z "$1" ]; then
+  output_dir="$(realpath $1)"
+  output_dir_wt_slash="${output_dir%/}"
+  gatsby_output_dir_wt_slash="${gatsby_output_dir%/}"
+
+  echo "Copying $gatsby_output_dir to $output_dir"
+  cp -r "$gatsby_output_dir_wt_slash"/* "$output_dir_wt_slash/"
+fi

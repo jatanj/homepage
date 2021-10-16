@@ -1,0 +1,21 @@
+@use "sass:color";
+
+$gray-300: #aeb4c0;
+$gray-400: #818b9e;
+$gray-500: #747f94;
+$gray-600: #5d6678;
+$gray-700: #434c5e;
+$gray-800: #3b4252;
+$gray-900: #2c303d;
+
+$info: #5bbad5;
+$primary: #6d6d9c;
+$secondary: $gray-500;
+$dark: #181a21;
+$body-bg: #202033;
+
+$headings-font-family: "DM Sans", sans-serif;
+$font-family-sans-serif: "Poppins", sans-serif;
+$font-size-base: 0.85rem;
+
+$link-color: $primary;

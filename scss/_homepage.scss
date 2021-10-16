@@ -1,0 +1,22 @@
+@use "sass:color";
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700');
+
+html, body {
+  min-height: 100vh;
+}
+
+.d-center {
+  @extend .align-items-center;
+  @extend .justify-content-center;
+}
+
+.user-select-none {
+  user-select: none !important;
+}
+
+@include media-breakpoint-up(sm) {
+  .min-vh-90 {
+    min-height: 90vh;
+  }
+}
