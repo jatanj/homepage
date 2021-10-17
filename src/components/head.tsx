@@ -8,10 +8,11 @@ type Props = {
 export default (props: Props) => {
   return (
     <Helmet
+      htmlAttributes={{ lang: "en" }}
       titleTemplate="%s | Jatan Patel"
       defaultTitle="Jatan Patel" defer={false}
     >
       {props.children}
     </Helmet>
-  )
+  );
 }

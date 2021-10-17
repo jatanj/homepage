@@ -7,7 +7,12 @@ module.exports = {
     "gatsby-plugin-sass",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-remove-generator",
-    "gatsby-plugin-no-javascript-utils",
+    {
+      resolve: "gatsby-plugin-purgecss",
+      options: {
+        printSummary: true
+      }
+    },
     {
       resolve: 'gatsby-plugin-no-javascript-utils',
       options: {
@@ -18,6 +23,6 @@ module.exports = {
         noInlineStyles: true,
         removeGatsbyAnnouncer: true,
       }
-    }
+    },
   ],
 };
