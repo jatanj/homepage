@@ -15,8 +15,13 @@ html, body {
   user-select: none !important;
 }
 
+.min-vh-90 {
+  min-height: 90vh;
+}
+
+.fs-icon {
+  font-size: calc($font-size-base * 2.5);
+}
+
 @include media-breakpoint-up(sm) {
-  .min-vh-90 {
-    min-height: 90vh;
-  }
 }

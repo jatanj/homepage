@@ -17,10 +17,10 @@ const IndexPage = () => {
           subheader="I'm a Software Engineer based in Phoenix, Arizona. Find me at the links below.">
           <div className="user-select-none">
             <a href="https://github.com/jatanj" target="_blank" rel="noopener noreferrer" aria-label="Github">
-              <i className="bi bi-github fs-2 me-2" title="Github" aria-hidden="true"></i>
+              <i className="bi bi-github fs-icon me-2" title="Github" aria-hidden="true"></i>
             </a>
             <a href="mailto:j@jatan.dev" aria-label="Email">
-              <i className="bi bi-envelope-fill fs-2 ms-2 me-2" title="Email" aria-hidden="true"></i>
+              <i className="bi bi-envelope-fill fs-icon ms-2 me-2" title="Email" aria-hidden="true"></i>
             </a>
           </div>
         </Content>
