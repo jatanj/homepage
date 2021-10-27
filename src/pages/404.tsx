@@ -14,7 +14,7 @@ const NotFoundPage = () => {
       <Container>
         <Content
           header="Page Not Found"
-          subheader="Whoops! You tried to access a page that doesn't exist.">
+          subheader="You tried to access a page that doesn't exist.">
           <div className="fs-5">
             <a href="/">Go back.</a>
           </div>
