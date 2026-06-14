@@ -1,6 +1,9 @@
 #!/bin/bash
 # usage: build [<output_dir>]
 
+NODE_OPTIONS=--openssl-legacy-provider
+export NODE_OPTIONS
+
 gatsby_dir="$(realpath $(dirname $0)/../)"
 gatsby_output_dir="$gatsby_dir/public"
 gatsby_commands=(
