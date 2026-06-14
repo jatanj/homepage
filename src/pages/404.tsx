@@ -13,11 +13,13 @@ const NotFoundPage = () => {
       </Head>
       <Container>
         <Content
-          header="Page Not Found"
-          subheader="You tried to access a page that doesn't exist.">
-          <div className="fs-5">
-            <a href="/">Go back.</a>
-          </div>
+          kicker="Error 404"
+          header={<>Page <span className="text-gradient">Not Found</span></>}
+          subheader="The page you're looking for doesn't exist or may have moved.">
+          <a href="/" className="back-link" aria-label="Back to home">
+            <i className="bi bi-arrow-left back-link__arrow" aria-hidden="true"></i>
+            <span>Back home</span>
+          </a>
         </Content>
       </Container>
     </div>
